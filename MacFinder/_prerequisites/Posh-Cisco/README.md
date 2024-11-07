@@ -44,6 +44,7 @@ PS> Install-Module -Name Posh-Cisco
 * Get-CiscoBridgeDomain: Gets the Bridge-Domain information.
 * Get-CiscoArp: Gets the ARP table.
 * Get-CiscoIpArp: Gets the IP ARP table.
+* Get-CiscoMacInRunningConfig: Retrieves the line of running configuration where a MAC is found.
 
 ## Usage
 
@@ -221,6 +222,18 @@ Advanced Options:
 * Specify the ```-AcceptKey``` flag to automatically accept SSH key.
 * Specify the ```-VRF <VRF name>``` parameter to return the IP ARP table for the VRF with the specified VRF name.
 
+### Find-CiscoMacInRunningConfig
+
+This PowerShell takes a Cisco-format MAC and returns the line of the running configuration where (if) it is present
+
+```Powershell
+PS> Find-CiscoMacInRunningConfig -HostAddress "192.168.1.1" -HostPort 22 -Mac "maca.ddre.ssss" -Credential (Get-Credential)
+```
+
+Advanced Options:
+
+* Specify the ```AcceptKey``` flag to automatically accept SSH key.
+
 ## Security Considerations
 
 Before you create scripts that use this module, you should create a readonly user with the necessary rights to be used for the PSCredentials.
@@ -246,6 +259,16 @@ These PowerShell functions were tested on the following Cisco devices:
 * WS-C3850-24S (SW version: 03.06.05E)
 
 ## Change Log
+
+### Version LadzVersion
+
+### New Features
+
+* Added support to find a MAC in the running config. (Find-CiscoMacInRunningConfig)
+
+#### Bug fixes
+
+* Now works properly with if an empty response is returned by the command sent to the device.
 
 ### Version 1.0.3
 
