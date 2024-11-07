@@ -18,6 +18,7 @@ It also leverages KeePass as a store for the credentials of the devices to poll.
 
 * Get-KeePassCredential: For a given KeePass database and master password, recovers the credentials to a given device.
 * Main body: Retrieve specified Interface statuses for a given device using credentials supplied from a KeePass database.
+* Build-HTMLReport: Construct the HTML report using outputs from all existing device fragments.
 
 ## Usage
 
@@ -28,6 +29,11 @@ PS>Get-DeviceStatus -DeviceVendor "CISCO" -DeviceRole "frontswitch" -IPAddress "
 Notes:
 * DeviceVendor is a set of values. For now, only "CISCO" and "HPE" are supported.
 * DeviceRole is a set of values. For now, only "frontswitch", "backswitch", and "router" are supported.
+
+## Output
+
+The output of the script is available in 2 formats, a standalone CSV file, and an HTML fragment.
+If the full HTML report is desired, run Build-HTMLReport.ps1 to construct it from existing fragments.
 
 ## Changelog
 
