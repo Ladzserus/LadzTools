@@ -4,7 +4,7 @@
     [string]$DeviceVendor,
 
     [Parameter(Mandatory=$true)]
-    [ValidateSet("fsw", "bsw", "rtr")]
+    [ValidateSet("frontswitch", "backswitch", "router")]
     [string]$DeviceRole,
 
     [Parameter(Mandatory=$true)]
