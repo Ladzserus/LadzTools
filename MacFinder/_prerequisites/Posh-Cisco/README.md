@@ -2,9 +2,11 @@
 
 This PowerShell module provides some functionality to facilitate automating backup actions of a Cisco device over SSH. This module also provides some basic functionality for troubleshooting Cisco devices.
 
+Original project: [Posh-Cisco](https://github.com/Nevets82/Posh-Cisco) by Nevets82.
+
 ## Similar Projects
 
-Here are some similar projects I am working on:
+Here are some similar projects from the original developer:
 
 * [Posh-FortiGate (PowerShell FortiGate Module)](https://www.powershellgallery.com/packages/Posh-FortiGate "Posh-FortiGate PowerShell FortiGate Module")
 * [Posh-Juniper (PowerShell Juniper Module)](https://www.powershellgallery.com/packages/Posh-Juniper "Posh-Juniper PowerShell Juniper Module")
@@ -326,8 +328,3 @@ These PowerShell functions were tested on the following Cisco devices:
 * Added support to get interfaces status (Get-CiscoInterfacesStatus)
 * Added support to get version information (Get-CiscoVersion)
 
-## Todo
-
-* Test on more devices
-* Backup vlan.dat
-* ...
