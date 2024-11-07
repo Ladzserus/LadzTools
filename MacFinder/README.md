@@ -1,4 +1,4 @@
-# Find-MACAddress on devices
+# Find-MACAddressOnDevices
 
 This PowerShell command is used to find a MAC address in Cisco running configurations. It's useful in environments where port-security is in effect and you need to find on which port a particular device is cabled up.
 
@@ -10,7 +10,7 @@ This PowerShell command is used to find a MAC address in Cisco running configura
 ## Usage
 
 ```PowerShell
-PS>Find-MacAdressOnDevices -Mac "maca.ddre.ssss" -Credential (Get-Credential)
+PS>Find-MacAdressOnDevices.ps1 -Mac "maca.ddre.ssss" -Credential (Get-Credential)
 ```
 
 Advanced Options:
